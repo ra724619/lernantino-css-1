@@ -1,3 +1,10 @@
+/*Psesudo Control*/
+:root {
+  --background-and-border: black;
+  --text: orange;
+}
+
+
 /*Meta Control*/
 
 * {
@@ -29,7 +36,7 @@ p {
 
 .headernav {
   padding:20px;
-  background-color: black;
+  background-color: var(--background-and-border);
   display:grid;
   grid-template-columns: 40% 20% 20% 20%;
   grid-template-rows: 50px 50px;
@@ -41,7 +48,7 @@ p {
 #heada {
   grid-area:heada;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end;
   margin:5px;
 }
@@ -49,7 +56,7 @@ p {
 #headb {
   grid-area:headb;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end;
   margin:5px;
 }
@@ -57,7 +64,7 @@ p {
 #headc {
   grid-area:headc;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end;
   margin:5px;
 }
@@ -65,35 +72,35 @@ p {
 #headhead {
   grid-area:headhead;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  font-size:40px;
   margin:5px;
 }
 
 .headernav a {
-  color: orange;
+  color: var(--text);
   padding: 20px;
   font-size: 18px;
 }
 
 .headernav h1 {
-  color:orange;
+  color:var(--text);
   padding:10px;
   font-size: 50px;
 }
 
 /*banner CSS*/
 .hero-banner {
-  color: orange;
+  color: var(--text);
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   background-image: url("../images/02-hero-bg.jpg");
   height:300px;
   font-size:30px;
-  border-bottom: black solid 5px;
-  border-top: black solid 5px;
+  border-bottom: var(--background-and-border) solid 5px;
+  border-top: var(--background-and-border) solid 5px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -102,9 +109,10 @@ p {
 
 #bannerhead {
   box-sizing: content-box;
-  background-color: rgba(0,0,0,0.7);
+  background-color: var(--background-and-border);
+  opacity: 70%;
   padding:20px;
-  border: 5px solid black;
+  border: 5px solid var(--background-and-border);
 }
 
 /*About Me CSS*/
@@ -124,7 +132,7 @@ p {
     padding:5px;
     display:flex;
     justify-content: flex-start;
-    border-right: 5px solid black;
+    border-right: 5px solid var(--background-and-border);
     padding-top:20px;
     font-size: 30px;
     text-align: left;
@@ -133,10 +141,9 @@ p {
 #aboutimg {
   grid-area: ai;
   padding:30px;
-
   background-image: url("../images/1660963280753.jpeg");
   box-sizing:content-box;
-  border:5px solid black;
+  border:5px solid var(--background-and-border);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -171,7 +178,7 @@ p {
   padding:5px;
   display:flex;
   justify-content: flex-start;
-  border-right: 5px solid black;
+  border-right: 5px solid var(--background-and-border);
   padding-top:20px;
   font-size: 30px;
   text-align: left;
@@ -180,53 +187,34 @@ p {
 #hc {
   grid-area:hc;
   background-image: url("../images/project1.jpeg");
-  border-left: 5px solid black;
-  border-right: 5px solid black;
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
+  border: var(--background-and-border) 5px solid;
   padding:20px;
 }
 
 #cs {
   grid-area:cs;
-  background-color:aliceblue;
-  border-left: 5px solid black;
-  border-right: 5px solid black;
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
+  border: var(--background-and-border) 5px solid;
   padding:20px;
   background-image: url("../images/02-portfolio-3.jpg");
 }
 
 #crm {
   grid-area:crm;
-  background-color: aqua;
-  border-left: 5px solid black;
-  border-right: 5px solid black;
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
+  border: var(--background-and-border) 5px solid;
   padding:20px;
   background-image: url("../images/02-portfolio-2.jpg");
 }
 
 #jw {
   grid-area:jw;
-  background-color: blue;
-  border-left: 5px solid black;
-  border-right: 5px solid black;
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
+  border: var(--background-and-border) 5px solid;
   padding:20px;
   background-image: url("../images/02-portfolio-1.jpg");
 }
 
 #sm {
   grid-area:sm;
-  background-color: red;
-  border-left: 5px solid black;
-  border-right: 5px solid black;
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
+  border: var(--background-and-border) 5px solid;
   padding:20px;
   background-image: url("../images/bigdeal.png");
 }
@@ -246,13 +234,13 @@ p {
   background-color: rgba(255,255,255,0.8);
   font-size:16px;
   padding:10px;
-  border: 5px solid black;
-  color: black solid;
+  border: 5px solid var(--background-and-border);
+  color: var(--background-and-border) solid;
   box-sizing:content-box;
 }
 
 nav a {
-  color:black;
+  color:var(--background-and-border);
 }
 
 /*contact CSS*/
@@ -263,8 +251,8 @@ nav a {
   grid-template-areas: 
   "cheader gmail linkedin github";
   box-sizing: border-box;
-  background-color: black;
-  color: orange;
+  background-color: var(--background-and-border);
+  color: var(--text);
 }
 
 #cheader {
@@ -279,30 +267,30 @@ nav a {
 #gmail {
   grid-area: gmail;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   margin:5px;
-  color: orange;
+  color: var(--text);
 
 }
 
 #linkedin {
   grid-area: linkedin;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   margin:5px;
-  color: orange;
+  color: var(--text);
 
 }
 
 #github {
   grid-area: github;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   margin:5px;
-  color: orange;
+  color: var(--text);
 
 }
 
@@ -345,7 +333,7 @@ nav a {
   }
 
   #aboutheader {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid var(--background-and-border);
     border-right: none;
     font-size:20px;
   }
@@ -363,7 +351,7 @@ nav a {
   }
 
   #workheader {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid var(--background-and-border);
     border-right: none;
     font-size:20px;
   }
@@ -422,7 +410,7 @@ nav a {
   }
 
   #aboutheader {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid var(--background-and-border);
     border-right: none;
     font-size:20px;
   }
@@ -440,7 +428,7 @@ nav a {
   }
 
   #workheader {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid var(--background-and-border);
     border-right: none;
     font-size:20px;
   }
