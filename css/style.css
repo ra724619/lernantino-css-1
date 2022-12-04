@@ -30,9 +30,8 @@ p {
 .headernav {
   padding:20px;
   background-color: black;
-  height:150px;
   display:grid;
-  grid-template-columns: 850px 340px 340px 340px;
+  grid-template-columns: 40% 20% 20% 20%;
   grid-template-rows: 50px 50px;
   grid-template-areas:
   "headhead heada headb headc"
@@ -93,6 +92,8 @@ p {
   background-image: url("../images/02-hero-bg.jpg");
   height:300px;
   font-size:30px;
+  border-bottom: black solid 5px;
+  border-top: black solid 5px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -110,11 +111,11 @@ p {
 #about {
   display:grid;
   padding:45px;
-  grid-auto-columns: 325px 900px 750px;
+  grid-auto-columns: 25% 25% 25% 25%;
   grid-auto-rows: 1fr 300px;
   grid-template-areas: 
-    "ah aa ai"
-    "ah aa ai"
+    "ah aa aa ai"
+    "ah aa aa ai"
   }
 
 
@@ -132,24 +133,20 @@ p {
 #aboutimg {
   grid-area: ai;
   padding:30px;
-  width: 300px;
-  height:300px;
+
   background-image: url("../images/1660963280753.jpeg");
   box-sizing:content-box;
   border:5px solid black;
-  display:flex;
-  align-items: center;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 5px;
-  align-content:end;
-  text-align: left;
 }
 
 #aboutarticle {
   grid-area: aa;
   padding:20px;
+
 }
 
 #profilephotocaption {
@@ -160,13 +157,13 @@ p {
 #work {
   display:grid;
   padding:50px;
-  grid-auto-columns: 325px 750px 750px;
+  grid-auto-columns: 25% 25% 25% 25%;
   grid-auto-rows: 300px 300px 300px 300px;
   grid-template-areas: 
-  "wh hc hc"
-  "wh hc hc"
-  "wh cs crm"
-  "wh jw sm";
+  "wh hc hc hc"
+  "wh hc hc hc"
+  "wh cs crm crm"
+  "wh jw sm sm";
 }
 
 #workheader {
@@ -261,57 +258,215 @@ nav a {
 /*contact CSS*/
 #contact {
   display:grid;
-  grid-template-columns: 370px 500px 500px 500px;
-  grid-template-rows: 50px 50px;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 1fr;
   grid-template-areas: 
   "cheader gmail linkedin github";
+  box-sizing: border-box;
+  background-color: black;
+  color: orange;
 }
 
 #cheader {
   grid-area: cheader;
-  padding:5px;
+  padding:10px;
   display:flex;
   font-size:30px;
-  justify-content: flex-start;
-  border-right: 5px solid black;
   padding-top:20px;
-  padding-left:30px;
-  text-align: left;
+  padding-left:60px;
 }
 
 #gmail {
   grid-area: gmail;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
   margin:5px;
+  color: orange;
+
 }
 
 #linkedin {
   grid-area: linkedin;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
   margin:5px;
+  color: orange;
+
 }
 
 #github {
   grid-area: github;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
   margin:5px;
+  color: orange;
+
 }
 
 /*media query*/
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:979px) and (min-width:770px) {
+
+  .headernav {
+    grid-template-rows: 50px 50fr;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-areas:
+    "headhead headhead headhead"
+    "heada headb headc";
+  }
+  #heada, #headb, #headc {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  #headhead {
+    font-size:40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-banner {
+    font-size:20px;
+    height:200px;
+  }
+
+  #about {
+    grid-template-rows: 100px 1fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "ah"
+    "aa"
+    "ai";
+  }
+
+  #aboutheader {
+    border-bottom: 5px solid black;
+    border-right: none;
+    font-size:20px;
+  }
+  
+  #work {
+    grid-template-rows: 1fr 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "wh"
+    "hc"
+    "cs"
+    "crm"
+    "jw"
+    "sm";
+  }
+
+  #workheader {
+    border-bottom: 5px solid black;
+    border-right: none;
+    font-size:20px;
+  }
+
+  #contact {
+    grid-template-rows: 50px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+    "cheader gmail linkedin github"
+  }
+
+   #gmail, #linkedin, #github, #cheader {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:12px;
+    font-size: 15px;
+  }
 
 }
 
-@media only screen and (max-width:600px) {
-  
-}
+@media only screen and (max-width:769px) {
 
-@media only screen and (max-width:400x) {
+  .headernav {
+    grid-template-rows: 25px 25fr;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-areas:
+    "headhead headhead headhead"
+    "heada headb headc";
+  }
+  #heada, #headb, #headc {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  #headhead {
+    font-size:30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-banner {
+    display:none;
+  }
+
+  #about {
+    grid-template-rows: 100px 1fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "ah"
+    "aa"
+    "ai";
+  }
+
+  #aboutheader {
+    border-bottom: 5px solid black;
+    border-right: none;
+    font-size:20px;
+  }
   
+  #work {
+    grid-template-rows: 1fr 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "wh"
+    "hc"
+    "cs"
+    "crm"
+    "jw"
+    "sm";
+  }
+
+  #workheader {
+    border-bottom: 5px solid black;
+    border-right: none;
+    font-size:20px;
+  }
+
+  #contact {
+    grid-template-rows: 50px 50px 50px 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "cheader" 
+    "gmail"
+    "linkedin" 
+    "github";
+  }
+
+   #gmail, #linkedin, #github {
+    display:flex;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  #cheader {
+    grid-area: cheader;
+    padding:10px;
+    display:flex;
+    justify-content: center;
+    font-size: 15px;  
+  }
+
 }
