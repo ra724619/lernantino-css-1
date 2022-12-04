@@ -1,0 +1,317 @@
+/*Meta Control*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: rgba(0,0,0,0.6);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/*Header CSS*/
+
+.headernav {
+  padding:20px;
+  background-color: black;
+  height:150px;
+  display:grid;
+  grid-template-columns: 850px 340px 340px 340px;
+  grid-template-rows: 50px 50px;
+  grid-template-areas:
+  "headhead heada headb headc"
+  "headhead heada headb headc";
+}
+
+#heada {
+  grid-area:heada;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin:5px;
+}
+
+#headb {
+  grid-area:headb;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin:5px;
+}
+
+#headc {
+  grid-area:headc;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin:5px;
+}
+
+#headhead {
+  grid-area:headhead;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  margin:5px;
+}
+
+.headernav a {
+  color: orange;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.headernav h1 {
+  color:orange;
+  padding:10px;
+  font-size: 50px;
+}
+
+/*banner CSS*/
+.hero-banner {
+  color: orange;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-image: url("../images/02-hero-bg.jpg");
+  height:300px;
+  font-size:30px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-content:end;
+}
+
+#bannerhead {
+  box-sizing: content-box;
+  background-color: rgba(0,0,0,0.7);
+  padding:20px;
+  border: 5px solid black;
+}
+
+/*About Me CSS*/
+#about {
+  display:grid;
+  padding:45px;
+  grid-auto-columns: 325px 900px 750px;
+  grid-auto-rows: 1fr 300px;
+  grid-template-areas: 
+    "ah aa ai"
+    "ah aa ai"
+  }
+
+
+#aboutheader {
+    grid-area: ah;
+    padding:5px;
+    display:flex;
+    justify-content: flex-start;
+    border-right: 5px solid black;
+    padding-top:20px;
+    font-size: 30px;
+    text-align: left;
+  }
+
+#aboutimg {
+  grid-area: ai;
+  padding:30px;
+  width: 300px;
+  height:300px;
+  background-image: url("../images/1660963280753.jpeg");
+  box-sizing:content-box;
+  border:5px solid black;
+  display:flex;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  align-content:end;
+  text-align: left;
+}
+
+#aboutarticle {
+  grid-area: aa;
+  padding:20px;
+}
+
+#profilephotocaption {
+  display:none;
+}
+
+/*Portfolio CSS*/
+#work {
+  display:grid;
+  padding:50px;
+  grid-auto-columns: 325px 750px 750px;
+  grid-auto-rows: 300px 300px 300px 300px;
+  grid-template-areas: 
+  "wh hc hc"
+  "wh hc hc"
+  "wh cs crm"
+  "wh jw sm";
+}
+
+#workheader {
+  grid-area: wh;
+  padding:5px;
+  display:flex;
+  justify-content: flex-start;
+  border-right: 5px solid black;
+  padding-top:20px;
+  font-size: 30px;
+  text-align: left;
+}
+
+#hc {
+  grid-area:hc;
+  background-image: url("../images/project1.jpeg");
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  padding:20px;
+}
+
+#cs {
+  grid-area:cs;
+  background-color:aliceblue;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  padding:20px;
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+#crm {
+  grid-area:crm;
+  background-color: aqua;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  padding:20px;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#jw {
+  grid-area:jw;
+  background-color: blue;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  padding:20px;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+#sm {
+  grid-area:sm;
+  background-color: red;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  padding:20px;
+  background-image: url("../images/bigdeal.png");
+}
+
+.workGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  align-content:end;
+  display:grid;
+}
+
+.workhead {
+  height: 120px;
+  width: 300px;
+  background-color: rgba(255,255,255,0.8);
+  font-size:16px;
+  padding:10px;
+  border: 5px solid black;
+  color: black solid;
+  box-sizing:content-box;
+}
+
+nav a {
+  color:black;
+}
+
+/*contact CSS*/
+#contact {
+  display:grid;
+  grid-template-columns: 370px 500px 500px 500px;
+  grid-template-rows: 50px 50px;
+  grid-template-areas: 
+  "cheader gmail linkedin github";
+}
+
+#cheader {
+  grid-area: cheader;
+  padding:5px;
+  display:flex;
+  font-size:30px;
+  justify-content: flex-start;
+  border-right: 5px solid black;
+  padding-top:20px;
+  padding-left:30px;
+  text-align: left;
+}
+
+#gmail {
+  grid-area: gmail;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin:5px;
+}
+
+#linkedin {
+  grid-area: linkedin;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin:5px;
+}
+
+#github {
+  grid-area: github;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin:5px;
+}
+
+/*media query*/
+@media only screen and (max-width:1000px) {
+
+}
+
+@media only screen and (max-width:600px) {
+  
+}
+
+@media only screen and (max-width:400x) {
+  
+}
